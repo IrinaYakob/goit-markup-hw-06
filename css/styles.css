@@ -685,6 +685,10 @@ border-radius: 4px;
     fill: currentColor;
 }
 
+.press-button{
+    display: block;
+    padding-top: px;
+}
   .button-footer{
       display: inline-block;
       padding-top: 10px;
@@ -703,8 +707,8 @@ border-radius: 4px;
       
   }
   .logo-send{
-      width: 13px;
-      height: 13px;
+      width: 24px;
+      height: 24px;
       margin-left: 10px;
   }
   .footer-main {
