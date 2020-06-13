@@ -54,7 +54,7 @@
         <section class="section hero">
           
             <h1 class="hero-title">эффективные решения <br> для вашего бизнеса</h1>
-            <a href="" class="button-hero">Заказать услугу</a>
+           <button class="button-hero" data-modal-open="">Заказать услугу</button> 
           
         </section>
   
@@ -480,37 +480,55 @@
    document.body.style.paddingTop = '${pageHeaderHeight}px';
  </script>
    -->
-   <form class=" form js-speaker-form">
-     <h2>Оставьте свои данные, мы вам перезвоним</h2>
-     <div role="group">
-       <div class="form-field">
-        <label for="name" class="form-lable">Имя</label>
-        <input type="text" name="name" id="name" class="form-input">
+   <button class="button-hero" data-modal-open="">Заказать услугу </button>
+
+<div class="backdrop is-hidden" data-backdrop>
+  <div class="modal">
+    <form class=" form js-speaker-form">
+    
+      <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+       
+       <div role="group">
+         <div class="form-field">
+          <label for="name" class="form-lable">Имя</label>
+          <input type="text" name="name" id="name" class="form-input">
+         </div>
+        
+        <div class="form-field">
+          <label for="tel" class="form-lable">Телефон</label>
+        <input type="tel" name="tel" id="tel" class="form-input">
+   
+        </div>
+        <div class="form-field">
+          <label for="email" class="form-lable">Почта</label>
+        <input type="email" name="email" id="email" class="form-input">
+   
+        </div>
+        
        </div>
-      
-      <div class="form-field">
-        <label for="tel" class="form-lable">Телефон</label>
-      <input type="tel" name="tel" id="tel" class="form-input">
- 
-      </div>
-      <div class="form-field">
-        <label for="email" class="form-lable">Почта</label>
-      <input type="email" name="email" id="email" class="form-input">
- 
-      </div>
-      
-     </div>
+  <div class="form-field">
+    <label for="comment">Комментарий</label>
+       <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Комментарий"></textarea>
+  
+  </div>
+    <div class="form-field">
+      <input type="checkbox" name="" value="policy" id="policy">
+       <label for="">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+    </div>   
+     <div class="form-field">
+      <button type="submit">Отправить</button>
+     </div>  
+  
+      <button data-modal-close="">закрыть модалку</button>
+       
+       
+     </form>
 
-     <label for="comment">Комментарий</label>
-     <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Комментарий"></textarea>
+  </div>
+</div>
 
-     <input type="checkbox" name="" value="policy" id="policy">
-     <label for="">Соглашаюсь с рассылкой и принимаю Условия договора</label>
 
-     <button type="submit">Отправить</button>
-     
-     
-   </form>
+  
    <script  src="./js/modal.js>
      (() => {
   const refs = {
@@ -527,6 +545,7 @@
   }
 })();
    </script>
+
 
 </body>
 </html>
