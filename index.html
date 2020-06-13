@@ -54,7 +54,7 @@
         <section class="section hero">
           
             <h1 class="hero-title">эффективные решения <br> для вашего бизнеса</h1>
-           <button class="button-hero" data-modal-open="">Заказать услугу</button> 
+           <button class="button-hero" data-modal-open>Заказать услугу</button> 
           
         </section>
   
@@ -480,9 +480,9 @@
    document.body.style.paddingTop = '${pageHeaderHeight}px';
  </script>
    -->
-   <button class="button-hero" data-modal-open="">Заказать услугу </button>
+   <button data-modal-open class="button-hero" >Заказать услугу </button>
 
-<div class="backdrop is-hidden" data-backdrop>
+<div class="backdrop is-hidden" data-modal>
   <div class="modal">
     <form class=" form js-speaker-form">
     
@@ -519,7 +519,7 @@
       <button type="submit">Отправить</button>
      </div>  
   
-      <button data-modal-close="">закрыть модалку</button>
+      <button data-modal-close>закрыть модалку</button>
        
        
      </form>
@@ -529,24 +529,9 @@
 
 
   
-   <script  src="./js/modal.js>
-     (() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
+   
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
-   </script>
-
-
+<script src="./js/modal.js"></script>
 </body>
 </html>
 © 2020 GitHub, Inc.
