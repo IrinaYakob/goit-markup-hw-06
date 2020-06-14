@@ -1084,10 +1084,54 @@ text-align: center;
       margin-bottom: 30px;
   }
   .form-field{
-      outline: 1px solid blue;
+      position: relative;
+      outline:1px solid rgba(33, 33, 33, 0.2);
       display: flex;
+      padding: 0;
       flex-direction: column;
-      margin-bottom: 28px;
-     
+      margin-bottom: 28px; 
+      padding: 0;
       
+  }
+  .form-lable{
+      position: absolute;
+      left:42px;
+      top: 50%; 
+      background-color: gold;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 1,14;
+      letter-spacing: 0.01em;
+      transform: translateY(-50%);
+      
+  }
+  .form-input{
+      
+      height: 40px;
+      margin: 0;
+      padding: 12px 16px;
+   
+      outline:1px solid rgba(33, 33, 33, 0.2);
+  }
+  .form-input:focus + .form-lable{
+      transform: translateY(-50px);
+     
+      color: red;
+  }
+  .form-texteria{
+      position: relative;
+      width: 448px;
+      height: 120px;
+  }
+  .texteria-lable{
+      position: absolute;
+      left: 16px;
+      top: 0;
+      background-color: gold;
+      font-weight: normal;
+font-size: 14px;
+line-height: 1,14;
+letter-spacing: 0.01em;
+transform: translateY(12%);
+
   }
