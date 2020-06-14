@@ -1129,6 +1129,9 @@ text-align: center;
       margin-right: 8px;
       transform: translateY(-50%);
   }
+  .form-input:focus ~ .form-icon{
+      fill:var(--accent-color);
+  }
   .form-texteria{
       position: relative;
       width: 448px;
