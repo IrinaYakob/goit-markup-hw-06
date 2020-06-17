@@ -255,6 +255,7 @@
   .button-hero{
   display: inline-block;
       padding: 10px 32px;
+      border: none;
       border-radius: 4px;
       text-decoration: none;
       color: var(--background-color);
@@ -1077,9 +1078,11 @@ transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
   .form-title{
       display: block;
        font-weight: bold;
-font-size: 20px;
-line-height: 1,15;
-text-align: center;
+       font-weight: bold;
+       font-size: 20px;
+       line-height: 1,5;
+       color: var(--title-text-color);
+      text-align: center;
       width: 448px;
       height: 23px;
       padding: 0;
@@ -1091,42 +1094,44 @@ text-align: center;
       display: flex;
       padding: 0;
       flex-direction: column;
-      border-radius: 4px;
-      border:1px solid rgba(33, 33, 33, 0.2);
       margin-bottom: 28px; 
       padding: 0;
-      
+     
+    
   }
   .form-lable{
       position: absolute;
       left:42px;
       top: 50%; 
-    
       font-weight: normal;
       font-size: 14px;
       line-height: 1,14;
       letter-spacing: 0.01em;
       transform: translateY(-50%);
-      
+      transition-duration: 500ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .form-input{
-      
+  .form-input{ 
       height: 40px;
       margin: 0;
       padding: 12px 16px;
       padding-left: 42px;
-      font: inherit;
-      border: inherit;
-     
+    border-radius: 4px;
+    border:1px solid rgba(33, 33, 33, 0.2);
   }
+
 .form-input:placeholder-shown{
     background-color: var(--background-color);
 }
   .form-input:focus + .form-lable,
-  .form-input :not(:placeholder-shown) + .form-lable {
-     transform: translateY(-50px);
+  .form-input:not(:placeholder-shown) + .form-lable {
+     transform: translate(-50px,-50px);
+    
      color: var(--accent-color);
   }
+
+
+
   .form-icon{
       display: block;
       position: absolute;
@@ -1145,6 +1150,7 @@ text-align: center;
       width: 448px;
       height: 120px;
       resize: none;
+      
   }
   .texteria-lable{
       position: absolute;
@@ -1154,19 +1160,89 @@ text-align: center;
 font-size: 14px;
 line-height: 1,14;
 letter-spacing: 0.01em;
+outline: none;
 transform: translateY(12%);
 
   }
+
   
 .button-close{
     display: flex;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    justify-content: center;
-    text-align: center;
-    
-    background-color: blue;
-    justify-content: center;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+width: 30px;
+height: 30px;
+background-color: var(--background-color);
+
+cursor: pointer;
+border-radius: 50%;
+border: 1px solid transparent;
+box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+fill: var(--secondary-text-color);
+transform: translate(25%, -25%) scale(1);
+transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+.checkbox{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+ .checkbox-lable{
+     display: flex;
+     align-items: center;
+     margin-left: 8px;  
+ } 
+.checkbox-title{
+font-weight: normal;
+font-size: 14px;
+line-height: 1,7;
+margin-left: 8px;
+
+}
+.icon-check{
+    display: inline-block;
   
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+
+}
+.checkbox:checked + .icon-check{ 
+    border-color: var(--accent-color);
+    background-color:var(--accent-color);
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
+.button-send{
+    display: block;
+   margin-top: 30px;
+   margin-left: 125px;
+   padding: 0;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1,87;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    
+}
+.checkbox-link{
+    color: var(--accent-color);
+}
