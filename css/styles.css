@@ -193,11 +193,11 @@
     
     
   }
-  .logo-contacts:hover{
+  .logo-contacts:hover {
     fill:  var(--accent-color);
   }
   .contacts .link:hover,
-  .contacts .link:focus{
+  .contacts .link:focus {
       color: var(--accent-color);
   }
   
