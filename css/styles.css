@@ -155,20 +155,19 @@
   
   
   /* contacts */
-  .contacts .link{
-      display: block;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1,14;
-      letter-spacing: 0.02em;
-      color: var(--primary-text-color); 
-      
-      transition-property: color;
-      transition-duration: 250ms ;
-      transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
-               
-     
-  } 
+  .contacts .link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1,14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+  }
   .contacts .auth-nav{
       display: flex;
       justify-content: center;
@@ -179,12 +178,19 @@
   .auth-nav .logo-contacts{
       display: flex;
       margin-right: 10px;
-      
-      
+          
   }
-
+  .auth-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
   .logo-contacts{
-    display: block;
+    display: flex;
+    align-items: center;
     fill: var(--primary-text-color);
     transition-property:fill;
     transition-duration: 250ms;
@@ -193,14 +199,18 @@
     
     
   }
-  .logo-contacts:hover {
-    fill:  var(--accent-color);
-  }
-  .contacts .link:hover,
-  .contacts .link:focus {
-      color: var(--accent-color);
-  }
-  
+  .logo-contacts,
+.link {
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover,
+.link:hover svg {
+  fill:var(--accent-color);
+  color:var(--accent-color);
+}
   .contacts .auth-nav+.auth-nav{
       margin-left: 50px;
       
@@ -710,11 +720,11 @@ border-radius: 4px;
   
   .button-footer{
       display:flex;
-      padding-top: 10px;
+     padding-top: 10px;
       padding-bottom: 10px;
       padding-left: 29px;
      margin-left:12px ;
-      max-width: 200px;
+      min-width: 200px;
       height: 50px;
       font-weight: bold;
       font-size: 16px;
